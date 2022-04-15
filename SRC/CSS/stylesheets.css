@@ -495,7 +495,6 @@ p.space::before {
     padding: 13px;
     background-color: #fcfcfc;
     display: inline-block;
-    float: left;
     text-align: center;
     border: 1px solid #c0bfbf;
 }
