@@ -575,7 +575,7 @@ p.space::before {
     border-radius: 5px;
 }
 
-@media only screen and (max-with: 769px){
+@media(max-with: 769px){
     .galeria-container .caja{
         flex-direction: column;
     }
@@ -584,7 +584,7 @@ p.space::before {
     }
 }
 
-@media only screen and (max-with: 643px){
+@media(max-with: 643px){
     .galeria-container .galeria-titulo{
         width: 100%;
     }
