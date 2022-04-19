@@ -575,6 +575,14 @@ p.space::before {
     border-radius: 5px;
 }
 
+.galeria-container .caja .imagenes .imagenes-texto p{
+    font-size: 2rem;
+    font-family: 'Sofia', cursive;
+    font-weight: bolder;
+    text-shadow: rgba(0, 0, 0, 0.507) 0.1em 0.1em 0.2em;
+    padding: 5px;
+}
+
 @media(max-with: 769px){
     .galeria-container .caja{
         flex-direction: column;
