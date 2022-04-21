@@ -12,7 +12,7 @@ let availableQuestions = []
 
 let questions = [
     {
-        question: '¿Hololive es una agencia de?',
+        question: '¿Hololive es una agencia dé?',
         choice1: 'Youtubers',
         choice2: 'Músicos',
         choice3: 'Pornografía',
@@ -30,7 +30,7 @@ let questions = [
     },
 
     {
-        question: '¿Cuál fue la primer Vtuber de Hololive?',
+        question: '¿Cuál fue la primera Vtuber de Hololive?',
         choice1: 'Shirakami Fubuki',
         choice2: 'Tokino Sora',
         choice3: 'Yina Calderón',
@@ -48,7 +48,7 @@ let questions = [
     },
 
     {
-        question: '¿Como se llamo la generación cuando se lanzaron las primeras Vtubers?',
+        question: '¿Comó se llamó la generación cuando se lanzaron las primeras Vtubers?',
         choice1: 'Holostars',
         choice2: 'Hololive Fantasy',
         choice3: 'HoloX',
