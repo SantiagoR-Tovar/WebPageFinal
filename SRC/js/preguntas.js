@@ -1,14 +1,14 @@
-const question = document.querySelector('#question');
-const choices = Array.from(document.querySelectorAll('.choice-text'));
-const progressText = document.querySelector('#progressText');
-const scoreText = document.querySelector('#score');
-const progressBarFull = document.querySelector('#progressBarFull');
+const question = document.getElementById('question');
+const choices = Array.from(document.getElementsByClassName('choice-text'));
+const progressText = document.getElementById('progressText');
+const scoreText = document.getElementById('score');
+const progressBarFull = document.getElementById('progressBarFull');
 
-let currentQuestion = {}
-let acceptingAnswers= true
-let score = 0
-let questionCounter = 0
-let availableQuestions = []
+let currentQuestion = {};
+let acceptingAnswers = false;
+let score = 0;
+let questionCounter = 0;
+let availableQuesions = [];
 
 let questions = [
     {
@@ -61,63 +61,62 @@ const SCORE_POINTS = 100
 const MAX_QUESTIONS = 5
 
 startGame = () => {
-    questionCounter = 0
-    score = 0
-    availableQuestions = [...questions]
-    getNewQuestion()
+    questionCounter = 0;
+    score = 0;
+    availableQuesions = [...questions];
+    getNewQuestion();
 }
 
 getNewQuestion = () => {
-    if(availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS){
-        localStorage.setItem('mostRecentStore', score)
-        return window.location.assign('test_end.html')
+    if (availableQuesions.length === 0 || questionCounter >= MAX_QUESTIONS) {
+        localStorage.setItem('mostRecentScore', score);
+        //go to the end page
+        return window.location.assign('test_end.html');
     }
+    questionCounter++;
+    progressText.innerText = `Question ${questionCounter}/${MAX_QUESTIONS}`;
+    //Update the progress bar
+    progressBarFull.style.width = `${(questionCounter / MAX_QUESTIONS) * 100}%`;
 
-    questionCounter++
-    progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`
-    progressBarFull.style.width = `${(questionCounter/MAX_QUESTIONS) * 100}%`
+    const questionIndex = Math.floor(Math.random() * availableQuesions.length);
+    currentQuestion = availableQuesions[questionIndex];
+    question.innerHTML = currentQuestion.question;
 
-    const questionsIndex = Math.floor(Math.random() * availableQuestions.length)
-    currentQuestion = availableQuestions[questionsIndex]
-    question.innerText = currentQuestion.question
+    choices.forEach((choice) => {
+        const number = choice.dataset['number'];
+        choice.innerHTML = currentQuestion['choice' + number];
+    });
 
-    choices.forEach(choice =>{
-        const number = choice.dataset['number']
-        choice.innerText = currentQuestion['choice' + number]
-    })
+    availableQuesions.splice(questionIndex, 1);
+    acceptingAnswers = true;
+};
 
-    availableQuestions.splice(questionsIndex, 1)
+choices.forEach((choice) => {
+    choice.addEventListener('click', (e) => {
+        if (!acceptingAnswers) return;
 
-    acceptingAnswers = true
-}
+        acceptingAnswers = false;
+        const selectedChoice = e.target;
+        const selectedAnswer = selectedChoice.dataset['number'];
 
-choices.forEach(choice => {
-    choice.addEventListener('click', e =>{
-        if(!acceptingAnswers) return
+        let classToApply =
+            selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
 
-        acceptingAnswer = false
-        const selectedChoice = e.target
-        const selectedAnswer = selectedChoice.dataset['number']
-
-        let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 
-        'incorrect'
-
-        if(classToApply === 'correct') {
-            incrementScore(SCORE_POINTS)
+        if (classToApply === 'correct') {
+                incrementScore(SCORE_POINTS);
         }
-
-        selectedChoice.parentElement.classList.add(classToApply)
-
+    
+        selectedChoice.parentElement.classList.add(classToApply);
+    
         setTimeout(() => {
-            selectedChoice.parentElement.classList.remove(classToApply)
-            getNewQuestion()
-
-        }, 1000)
+            selectedChoice.parentElement.classList.remove(classToApply);
+            getNewQuestion();
+        }, 1000);
     })
 
-    incrementScore = num => {
-        score += num
-        scoreText.innerText = score
+    incrementScore = (num) => {
+        score += num;
+        scoreText.innerText = score;
     }
 
     startGame()
