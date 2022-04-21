@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="/SRC/Images/Brand/Hololive_triangles_logo.svg.png">
+    <link rel="stylesheet" href="/SRC/CSS/stylesheets.css">
+    <link rel="stylesheet" href="/SRC/CSS/stylegalery-test.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sofia&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <title>New Bloom Festival</title>
+</head>
+
+<div class="navbar">
+    <a href="/index.html">Home</a>
+    <a href="#news">News</a>
+    <a href="#contact">Contact</a>
+    <a href="galeria.html">Galery</a>
+</div>
+
+<body>
+
+    <div class="test-container">
+        <div id="end" class="flex-center flex-column">
+            <h1 id="finalScore">0</h1>
+            <form class="end-form-container">
+                <h1 id="end-text">Introduzca su nombre abajo para guardar su puntaje</h1>
+            <input type="text" name="name" id="username" placeholder="Ingrese su nombre">
+            <button class="btn" id="saveScoreBtn" type="submit" onclick="saveHighScore(event)" disabled>Guardar</button>
+            </form>
+            <a href="/SRC/HMTL/preguntas.html" class="btn">Jugar de nuevo</a>
+            <a href="/SRC/HMTL/test.html" class="btn"> Volver <i class="fas fa-home"></i></a>
+        </div>    
+    </div>
+    
+    <script src="/SRC/js/test_end.js"></script>
+</body>
+</html>
