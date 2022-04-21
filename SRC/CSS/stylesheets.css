@@ -676,3 +676,60 @@ p.space::before {
 /* .submit:active {
   background-color: #06b;
 } */
+/*Artist Page*/
+
+.box-artist {
+    display: block;
+    border: 6px solid #5f5f84;
+    background-color: rgba(255,255,255,0.7);
+    padding-top: 20px;
+    padding-bottom: 40px;
+    padding-right: 100px;
+    padding-left: 100px;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+}
+
+.box-artist .textbox_artist p {
+    line-height: 1.5em;
+    color: #000;
+    margin-bottom: 0em;
+}
+p.text_main {
+    position: relative;
+    text-align: left;
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 1.6em
+    
+}
+
+p.text {
+    position: relative;
+    text-align: left;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.6em
+}
+.artist_flex {
+    display: flex;
+    justify-content: space-between;
+    grid-column-gap: 100px;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+/* Title*/
+
+.box-artist .title-artist{
+    font-weight: 700;
+    font-size: 30px;
+    margin-bottom: 1em;
+    line-height: 1.3em;
+    border-bottom: 2px solid #5f5f84;
+    padding-bottom: 0.3em; 
+    text-align: left;
+}
+
