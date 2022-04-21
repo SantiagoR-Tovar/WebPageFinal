@@ -164,16 +164,17 @@ input::placeholder{
     margin-bottom: 0.8rem;
     width:  100%;
     border-radius: 4px;
-    background: rgb(18, 93, 255);
+    background: #447efc;
+    transition: all 0.3s ease;
     font-size: 3rem;
     min-width: 80rem;
 }
 
 .choice-container:hover{
     cursor: pointer;
-    box-shadow: 0 0.4rem 1.4rem 0 rgba(6, 103, 247, 0.5);
-    transform: scale(1.02);
+    box-shadow: 10px -10px 25px 0 rgba(143,64, 248, 0.5), -10px 10px 25px 0 rgba(39, 200, 255, 0.5);    transform: scale(1.02);
     transform: transform 100ms;
+    transform: translate(0, -6px);
 }
 
 .choice-prefix {
@@ -184,10 +185,13 @@ input::placeholder{
 .choice-text {
     padding: 2rem;
     width: 100%;
+    color: #fff;
 }
 
 #question{
-    font-size: 2rem;
+    font-size: 3rem;
+    padding: 15px;
+    font-family: 'Sofia', cursive;
 }
 
 /* CAMBIA DE ACUERDO A LA RESPUESTA*/
@@ -203,6 +207,7 @@ input::placeholder{
 #hud{
     display: flex;
     justify-content: space-between;
+    margin-top: 25rem;
 }
 
 .hud-prefix{
