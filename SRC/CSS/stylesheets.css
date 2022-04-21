@@ -532,3 +532,146 @@ p.space::before {
     cursor: pointer;
     background-color: #05b1a3;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*FORMMMMMMMMMMMMMMMMMMMMM */
+.form {
+    margin: auto;
+    background-color: rgba(255,255,255,0.7);
+    /* #5f5f84;
+     rgba(255,255,255,0.7); */
+    border-radius: 5px;
+    box-sizing: border-box;
+    height: 320px;
+    padding: 20px;
+    width: 50%;
+    margin-bottom: 1px;
+}
+
+.title {
+    font-family:'Sofia', cursive;
+    color: #5f5f84;
+    font-size: 36px;
+    font-weight: 600;
+    margin-top: 30px;
+}
+
+.subtitle {
+    font-family:'Nunito', sans-serif ;
+    color: #5f5f84;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.input-container {
+    height: 50px;
+    position: relative;
+    width: 100%;
+}
+
+.ic1 {
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+.ic2 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.input {
+    background-color: #5f5f84;
+    border-radius: 3px;
+    border: 0;
+    box-sizing: border-box;
+    color: #eee;
+    font-family:'Nunito', sans-serif ;
+    font-size: 18px;
+    height: 100%;
+    outline: 0;
+    padding: 4px 20px 0;
+    width: 100%;
+    
+}
+
+.cut {
+    background-color: #ffffffb3; 
+    border-radius: 2px;
+    height: 20px;
+    left: 20px;
+    position: absolute;
+    top: -20px;
+    transform: translateY(0);
+    transition: transform 200ms;
+    width: 100px;
+}
+
+.cut-short {
+    width: 60px;
+}
+
+.input:focus ~ .cut,
+.input:not(:placeholder-shown) ~ .cut {
+    transform: translateY(8px);
+}
+
+
+.placeholder {
+    color: #ffffffb3; 
+    font-family:'Nunito', sans-serif ;
+    left: 20px;
+    line-height: 14px;
+    pointer-events: none;
+    position: absolute;
+    transform-origin: 0 50%;
+    transition: transform 200ms, color 200ms;
+    top: 20px;
+}
+
+.input:focus ~ .placeholder,
+.input:not(:placeholder-shown) ~ .placeholder {
+    transform: translateY(-30px) translateX(10px) scale(0.75);
+}
+
+/* .input:not(:placeholder-shown) ~ .placeholder {
+    color: #adb5bd;
+} */
+
+.input:focus ~ .placeholder {
+    color:  #5f5f84;
+}
+
+.submit {
+    background-color:  #2d2d43;/* border: 6px solid #5f5f84 #ffffffb3; */
+    border-radius: 2px;
+    border: 0;
+    box-sizing: border-box;
+    color: #ffffffb3;
+    cursor: pointer;
+    font-size: 28px;
+    font-family:'Nunito', sans-serif ;
+    height: 60px;
+    width: 120px;
+    margin-top: 10px;
+    outline: 0;
+    text-align: center;
+    /* width: 100%;*/
+    text-decoration: none;
+}
+
+/* .submit:active {
+  background-color: #06b;
+} */
