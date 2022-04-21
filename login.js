@@ -30,7 +30,7 @@ login_btn.addEventListener('click', function(){
         if(decrypt(user_entry.password, key) == decrypt(admin_allowed.password, admin_allowed.key)){
             console.log("son iguales");
             // login_form.action = "/admin_panel.html";
-            window.location.replace("/admin_panel.html");
+            window.location.replace("Admin/admin_panel.html");
         }else{
             login_form.action = "";
             console.log("NOO son iguales");

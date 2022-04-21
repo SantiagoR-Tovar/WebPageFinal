@@ -1,0 +1,206 @@
+h5,h4,h3 {
+    margin: 0%;
+}
+
+/*Header Admin CSS Start*/
+header{
+    width: auto;
+    max-height: 3.5em;
+    background-color: pink;
+    padding: 0.2em 0.6em;
+    /*opacity: 0.5;*/
+    border-radius: 0.8em;
+}
+
+header > div.adminBar {
+    height: 3.5em;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    justify-content: space-between;
+}
+
+header > div.adminBar > div.flexleft {
+    height: 3.5em;
+    flex-direction: row;
+    display: flex;
+    gap: 1em; 
+    align-items: center;
+}
+
+header > div.adminBar > div.flexRight {
+    height: 3.5em;
+    flex-direction: row-reverse;
+    display: flex;
+    gap: 0.7em; 
+    align-items: center;
+}
+
+header > div.adminBar > div.flexleft > img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 50%;
+}
+
+header > div.adminBar > div.flexleft > div.adminWrapper {
+    display: grid;
+    grid-gap: 0.4em;
+}
+
+.itemName {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.itemAdmin {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.vl {
+    border-left: 0.15em solid black;
+    height: 3.8em;
+}
+
+/*Header Admin CSS End*/
+
+
+/*Main Admin CSS Start*/
+
+main > div.artistasData{
+    width: auto;
+    background-color: pink;
+    padding: 0.2em 0.6em;
+    /*opacity: 0.5;*/
+    border-radius: 0.8em;
+    margin-top: 1.5em;
+}
+
+main > div.galeriaData{
+    width: auto;
+    background-color: pink;
+    padding: 0.2em 0.6em;
+    /*opacity: 0.5;*/
+    border-radius: 0.8em;
+    margin-top: 1.5em;
+}
+
+/*Main Admin CSS End*/
+
+/*Editable Grid of Artist Start*/
+
+main > div.artistasData > div.artistDataWrapper {
+    position: relative;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    column-gap: 1em;
+    row-gap: 1em;
+}
+
+.childElement {
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.artistDiv {
+    text-align: center;
+    max-width: 20em;
+    max-height: 20em;
+    min-width: auto;
+    background-color: rgb(245, 227, 230);
+    padding-bottom: 0.4em;
+    border-radius: 0.8em;
+}
+
+.artistDiv > img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 0.8em;
+}
+
+.artistDiv .artistButton {
+    max-width: auto;
+    background-color: #f1f1f1;
+    color: black;
+    font-size: 0.7em;
+    padding: 0.9em 7em;
+    border: none;
+    cursor: pointer;
+    border-radius: 50px;
+    text-align: center;
+}
+
+.artistDiv .artistButton:hover {
+    background-color: black;
+    color: white;
+}
+
+.plusButton {
+    background-color: #f1f1f1;
+    border: none;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    width: 1.2em;
+    font-size: 4em;
+    border-radius: 50%;
+}
+
+.plusButton:hover {
+    background-color: black;
+    color: white;
+}
+
+/*Boton Add Artist Start*/
+
+.form-popup {
+    width: fit-content;
+    display: none;
+    position: relative;
+    text-align: center;
+    border: 0.2em solid #f1f1f1;
+    background-color: white;
+    z-index: 9;
+}
+
+div.form-example {
+    display: grid;
+    text-align: center;
+}
+
+/*Boton Add Artist End*/
+
+/*Artist Modify Start*/
+
+.ElementWrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 1em;
+    row-gap: 1em;
+}
+
+.imgItem{
+    grid-column: 1;
+    grid-row: 1;
+    background-color: antiquewhite;
+}
+
+.descItem{
+    grid-column: 2;
+    grid-row: 1;
+    background-color: antiquewhite;
+}
+
+.spotiItem{
+    grid-column: 1;
+    grid-row: 2;
+    background-color: antiquewhite;
+}
+
+
+/*Artist Modify End*/
