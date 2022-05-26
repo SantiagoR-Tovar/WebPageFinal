@@ -7,6 +7,7 @@ let adm_mail = document.getElementById("email");
 let user_entry = new Object();
 const admin_allowed = {
     email : "real_admin@gmail.com",
+    // password : "FtD409AzYfyvQb%FJCzYVmG",//"therealpasswordfestival"
     password : "FtD409AzYfyvQb%FJCzYVmG",//"therealpasswordfestival"
     //"therealpasswordfestival"
     //"therealpasswordfestival"
@@ -29,12 +30,14 @@ login_btn.addEventListener('click', function(){
 
         if(decrypt(user_entry.password, key) == decrypt(admin_allowed.password, admin_allowed.key)){
             console.log("son iguales");
+            alert("Encriptada: "+ user_entry.password+ " Igual a: "+ admin_allowed.password );
             // login_form.action = "/admin_panel.html";
             window.location.replace("Admin/admin_panel.html");
         }else{
             login_form.action = "";
             console.log("NOO son iguales");
             // window.location.replace("/admin_panel.html");
+            alert("Correo o contraseña incorrectas"+ user_entry.password) ;
             alert("Correo o contraseña incorrectas");
             location.reload();
             

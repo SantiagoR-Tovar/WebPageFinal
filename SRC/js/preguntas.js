@@ -48,17 +48,25 @@ let questions = [
     },
 
     {
-        question: '¿Comó se llamó la generación cuando se lanzaron las primeras Vtubers?',
+        question: '¿Comó se llamó la generación cuando se lanzaron las primeras Vtubers americanas?',
         choice1: 'Holostars',
         choice2: 'Hololive Fantasy',
         choice3: 'HoloX',
         choice4: 'HoloMyth',
         answer: 4,
     },
+    {
+        question: '¿Cual es la Vtuber que llego a 1 millon de subscriptores en 2 meses?',
+        choice1: 'Calliope Mori',
+        choice2: 'Akai Haato',
+        choice3: 'Gawr Gura',
+        choice4: 'Usada Pekora',
+        answer: 3,
+    },
 ]
 
 const SCORE_POINTS = 100
-const MAX_QUESTIONS = 5
+const MAX_QUESTIONS = 6
 
 startGame = () => {
     questionCounter = 0;
