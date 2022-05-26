@@ -170,6 +170,7 @@ a {
 .navbar {
     display: flex;
     flex-direction: row;
+    /* flex-flow: column; */
     overflow: hidden;
     background-color: rgba(101, 93, 138,0.7);
     position: fixed; /* Set the navbar to fixed position */
@@ -178,6 +179,13 @@ a {
     width: 100%; /* Full width */
     
 }
+/* @media (max-width: 643px){
+    .navbar{
+        flex-direction: column;
+        width: 30%;
+    }
+} */
+
 
 /* Links inside the navbar */
 .navbar a {
@@ -187,6 +195,8 @@ a {
     text-align: center;
     padding: 20px 24px;
     text-decoration: none;
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.8em;
 }
 
 /* Change background on mouse-over */
