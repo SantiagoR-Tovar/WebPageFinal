@@ -548,16 +548,33 @@ p.space::before {
 
 
 /*FORMMMMMMMMMMMMMMMMMMMMM */
+@media (max-width: 643px){
+    .banner-image{
+        width: 100%;
+    }
+}
+
+
+.formulario{
+    width: auto;
+    height: 90vh;
+    width: auto;
+}
 .form {
-    margin: auto;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    
     background-color: rgba(255,255,255,0.7);
     /* #5f5f84;
      rgba(255,255,255,0.7); */
     border-radius: 5px;
     box-sizing: border-box;
-    height: 320px;
-    padding: 20px;
-    width: 50%;
+    
+    padding: 1%;
+
+    height: 50vh;
+    width: auto;
+
     margin-bottom: 1px;
 }
 
