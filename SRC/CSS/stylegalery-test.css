@@ -48,7 +48,7 @@
     padding: 5px;
 }
 
-@media(max-with: 769px){
+@media (max-width: 769px){
     .galeria-container .caja{
         flex-direction: column;
     }
@@ -57,13 +57,9 @@
     }
 }
 
-@media(max-with: 643px){
+@media (max-width: 643px){
     .galeria-container .galeria-titulo{
         width: 100%;
-    }
-    
-    .galeria-container .galeria-titulo h3{
-        font-size: 1em;
     }
 }
 

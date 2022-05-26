@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/css/stylesheet2.css">
+    <title>Admin New Bloom</title>
+</head>
+<body>
+    <header>
+    <!--- Admin header Start--->
+        <div class="adminBar">
+            <!--- Admin header Img & Name Start --->
+            <div class="flexleft">
+                    <img class="itemImg" src="/Admin/src/img/pekoraAdming.png" alt="imagen no encontrada">
+                <div class="adminWrapper">
+                    <h4 class="itemName">Santiago Ramirez Tovar</h4>
+                    <h4 class="itemAdmin">Admin</h4>
+                </div>
+            </div>
+            <!--- Admin header Img & Name End --->
+
+            <!--- Admin header Artistas & Galeria Start --->
+            <div class="flexRight">
+                <h3 class="itemArtist">Galeria</h3>
+                <div class="vl"></div>
+                <h3 class="itemGaleria">Artistas</h3>
+                <div class="vl"></div>
+            </div>
+            <!--- Admin header Artistas & Galeria End --->       
+        </div>
+    <!--- Admin header End--->
+    </header>
+
+    <main>
+        <!-- Galeria Form Start -->
+        <div class="form-popup" id="myFormGaleria">
+            <form id ="GaleriaForm" action="" method="get" class="form-example">
+
+                <div class="form-example">
+                  <label for="Gname">Enter Place name: </label>
+                  <input type="text" name="Gname" id="Gname" required>
+                </div>
+
+                <div class="form-example">
+                    <label for="Gfile">Upload Place img</label>
+                    <input type="file" name="Gfile" id="Gfile" accept="image/*">
+                </div>
+
+                <div class="form-example">
+                    <label for="Gdescription">Description: </label>
+                    <textarea name="Gdescription" id="Gdescription" cols="30" rows="10"></textarea>
+                </div>
+
+                <div class="form-example">
+                    <button onclick="closeFormG()">Ingresar</button>
+                </div>
+            </form>
+        </div>
+        <!-- Galeria Form End -->
+        
+        <!-- Artist Form Start -->
+        <div class="form-popup" id="myForm">
+            <form id ="artistForm"action="" method="get" class="form-example">
+
+                <div class="form-example">
+                  <label for="name">Enter Artist name: </label>
+                  <input type="text" name="name" id="name" required>
+                </div>
+
+                <div class="form-example">
+                  <label for="url">Spotify url</label>
+                  <input type="text" name="url" id="url">
+                </div>
+
+                <div class="form-example">
+                    <label for="file">Upload artist img</label>
+                    <input type="file" name="file" id="file" accept="image/*">
+                </div>
+
+                <div class="form-example">
+                    <label for="description">Description: </label>
+                    <textarea name="description" id="description" cols="30" rows="10"></textarea>
+                </div>
+
+                <div class="form-example">
+                    <button onclick="closeForm()">Ingresar</button>
+                </div>
+            </form>
+        </div>
+        <!-- Artist Form End -->
+
+        <!-- Artist Data Button Start -->
+        <div class="artistasData">
+            <h4>Artistas</h4>
+            <br>
+            <div class="artistDataWrapper">
+                <div id="childElement">
+                    <button onclick="openForm()" class="plusButton" type="button" id="plusButton">+</button>
+                </div>
+            </div>
+            <br>
+            <label for="mName">Enter Artist name:</label>
+            <input type="text" name="mName" id="mName" required>
+            <button onclick="modifyA()" class="modifyButton" type="button" id="modifyButton">Modify</button>
+            <button onclick="deletA()" class="modifyButton" type="button" id="modifyButton">Remove</button>
+        </div>
+        <!-- Artist Data Button End -->
+
+        <!-- Galeria Data Button Start -->
+        <div class="artistasData">
+            <h4>Galeria</h4>
+            <br>
+            <div class="artistDataWrapper">
+                <div id="childGaleria">
+                    <button onclick="openFormG()" class="plusButton" type="button" id="plusButton">+</button>
+                </div>
+            </div>
+            <br>
+            <label for="gName">Enter Image name:</label>
+            <input type="text" name="gName" id="gName" required>
+            <button onclick="modifyG()" class="modifyButton" type="button" id="modifyButton">Modify</button>
+            <button onclick="deletG()" class="modifyButton" type="button" id="modifyButton">Remove</button>
+        </div>
+        <!-- Galeria Data Button End -->
+    </main>
+    
+    <footer>
+
+    </footer>
+</body>
+<script src="/Admin/src/js/adminStorage.js"></script>
+</html>
