@@ -1,20 +1,23 @@
 *{
-    /* text-align: center; */
+    text-align: center;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;    
 }
 
 p{
+    display: flex;
+    text-align: center;
     color: black;
     font-family: 'Nunito', sans-serif;
-    font-size: 20px;
+    font-size: 1.25em;
+    flex-direction: row;
+    justify-content: center;
 }
 
 h1{ 
     color: black ;
     font-family: 'Sofia', cursive;
-    font-size: 40px;
+    font-size: 2.5em;
 }
 
 body {
@@ -44,86 +47,79 @@ a {
 
 .mySlides {display: none;}
 
-.banner{
-    display: block;
-    margin: 100px auto 40px auto;
-    width: 40%;
-}
-
-.banner > .banner-image {
-    display: block;
-    margin: 100px auto 40px auto;
-    width: 40%;
-}
-
 .hero-container{
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 4px;
-    padding: 4px;
-    margin: auto 50px;
-}
-
-.hero {
-    max-width: 1400px;
-    margin: auto;
-    object-fit: cover;
-}
-
-.hero > img{
-    object-fit: cover;
-    width: 100%;
+    display: flex;
+    flex: 100%;
+    padding: 4.375em 1.25em 2em 1.25em;
+    margin: 0em 1em;
 }
 
 .hero > video{
-    object-fit: cover;
-    width: 92%;
-    border-radius: 20px;
+    width: 100%;
+    padding: 1.25em 0.625em 0em 0.625em;
+    border-radius: 1.8em;
 }
 
 .grid-container {
-    display: grid;
-    grid-template-columns: 220px 220px 220px 1fr;
-    gap: 4px;
-    column-gap: 30px;
-    padding: 4px;
-    margin: auto 100px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    gap: 2em;
+    margin: auto 2em;
 }
 
-.grid-container > div {
+/*.grid-container > div {
+    flex: 1;
     text-align: center;
-    padding: 20px 0;
-}
+    padding: 1.25em 1.25em;
+}*/
 
 .grid-venta{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 4px;
-    column-gap: 30px;
-    padding: 4px;
-    margin: auto 100px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 0.25em;
+    column-gap: 1.875em;
+    padding: 0.25em;
+    margin: auto 6em;
 }
 
 .grid-venta > div {
     text-align: center;
-    padding: 20px 0 0 0;
+    padding: 1.25em 0 0 0;
 }
 
-.item1 {
-    grid-column-start: 1;
-    grid-column-end: 4;
+
+.description {
+    max-width: 500em;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    flex-direction: row;
+    justify-content: center;
+    border-radius: 1.25em;
 }
 
-.description{
-    grid-column-start: 4;
-    grid-column-end: 5;
+.description > h1 {
+    width: 20em;
 }
-/*
+
+.description > iframe {
+    flex: 100%;
+    border-radius: 1.25em;
+    width: 20em;
+}
+
 .description > p{
+    flex: 50%;
+    text-align: center;
+    flex-wrap: wrap;
     background-color: rgba(255, 255, 255, 0.7);
-    border-radius: 10px;
+    border-radius: 0.625em;
+    width: 20em;
 }
-*/
+
 
 .item {
     grid-column-start: 1;
@@ -172,6 +168,8 @@ a {
 }
 /* The navigation bar */
 .navbar {
+    display: flex;
+    flex-direction: row;
     overflow: hidden;
     background-color: rgba(101, 93, 138,0.7);
     position: fixed; /* Set the navbar to fixed position */
@@ -183,8 +181,8 @@ a {
 
 /* Links inside the navbar */
 .navbar a {
+    width: 5rem;
     float: left;
-    display: block;
     color: #f2f2f2;
     text-align: center;
     padding: 20px 24px;
@@ -196,17 +194,6 @@ a {
     background: #ddd;
     color: black;
 }
-#ad_lgn{
-    margin-left: 1000px;
-}
-
-
-/* Slideshow container */
-.slideshow-container {
-    max-width: 1000px;
-    margin: auto;
-    object-fit: cover;
-}
 
 .slideshow-container > div > img {
     object-fit: cover;
@@ -214,28 +201,30 @@ a {
 }
 
 .programation-grid{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 4px;
-    column-gap: 30px;
-    padding: 4px 20px;
-    margin: auto 100px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1em;
+    margin: auto 2em;
     background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 20px;
+    border-radius: 1em;
 }
 
 .programation{
-    text-align: center;
-    padding: 20px 0;
-    max-width: 900px;
-    margin: auto;
-    object-fit: cover;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 0;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: nowrap;
+    width: -webkit-fill-available;
 }
 
 .programation > section > img{
-    object-fit: cover;
-    width: 100%;
-    border-radius: 20px;
+    width: 70%;
+    border-radius: 1em;
 }
 
 /* Sell Tikets */
@@ -273,12 +262,15 @@ p.space::before {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 25px;
+    margin-bottom: 1.5625em;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
 }
 
 .ticket_flex .price {
     font-weight: 700;
-    font-size: 40px;
+    font-size: 2.5em;
     margin-bottom: 0;
     line-height: 1em;
 }
@@ -329,13 +321,17 @@ p.space::before {
 /* Header */
 
 .box-tikets .title-tickets{
+    display: flex;
     font-weight: 700;
-    font-size: 30px;
+    font-size: 1.875em;
     margin-bottom: 1em;
     line-height: 1.3em;
     border-bottom: 2px solid #5f5f84;
-    padding-bottom: 0.3em; 
+    padding-bottom: 0.3em;
     text-align: left;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Animation */
@@ -680,89 +676,3 @@ p.space::before {
 /* .submit:active {
   background-color: #06b;
 } */
-/*Artist Page*/
-
-.box-artist {
-    display: block;
-    border: 6px solid #5f5f84;
-    background-color: rgba(255,255,255,0.7);
-    padding-top: 20px;
-    padding-bottom: 40px;
-    padding-right: 100px;
-    padding-left: 100px;
-    margin-left: 50px;
-    margin-right: 200px;
-    width: 100%;
-    height: 100vh;
-    margin-bottom: 20px;
-    border-radius: 15px;
-}
-.textbox_artist  {
-    width: 100vw;
-    height:10wh;
-}
-
-.artist_flex {
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 25px;
-}
-.artist_flex_image{
-    width: 200vh;
-    height: 50vh;
-    border-style:solid ;
-    border-color: darkred;
-    
-    
-}
-.artist_flex_image img{
-    
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-@media (max-width:769px){
-    .artist_flex {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 25px;
-    } 
-}
-
-.box-artist .textbox_artist p {
-    line-height: 1.5em;
-    color: #000;
-    margin-bottom: 0em;
-}
-p.text_main {
-    position: relative;
-    text-align: left;
-    font-size: 25px;
-    font-weight: bold;
-    line-height: 1.6em
-    
-}
-
-p.text {
-    position: relative;
-    text-align: left;
-    font-size: 18px;
-    font-weight: bold;
-    line-height: 1.6em
-}
-
-
-
-/* Title*/
-
-.box-artist .title-artist{
-    font-weight: 700;
-    font-size: 30px;
-    margin-bottom: 1em;
-    line-height: 1.3em;
-    border-bottom: 2px solid #5f5f84;
-    padding-bottom: 0.3em; 
-    text-align: left;
-}
-
